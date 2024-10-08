@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Virtual</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+            </div>
+            
+            <h1>ESSÊNCIA MISTICA</h1>
+
+            <div class="cart">
+                <button onclick="toggleCart()">Carrinho (<span id="cart-count">0</span>)</button>
+                <div id="cart" class="cart-content">
+                    <h3>Carrinho</h3>
+                    <ul id="cart-items">
+                        <!-- Items do carrinho serão inseridos aqui -->
+                    </ul>
+                    <p>Total: R$ <span id="cart-total">0.00</span></p>
+                    <button onclick="clearCart()">Limpar Carrinho</button>
+                </div>
+            </div>
+            <div class="header-button">
+                <button ><a href="./sobre.html">Sobre nós</a></button>
+            </div>
+            <div class="login-button">
+                <a href="./login.html">
+                    <button onclick="loginAction()">Login</button>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div>
+        
+
+    </div>
+
+
+     <div style="display: none; margin-bottom: 40px;" id="cadastrar_produto">
+        <input type="text" id="nome" placeholder="Nome do produto">
+        <input type="text" id="preco" placeholder="Preço do produto">
+        <input type="text" id="descricao" placeholder="Descrição do produto">
+        <input type="file" id="image" placeholder="image">
+        <button onclick="cadastrarproduto(event)">Inserir</button>
+     </div>
+
+     <script>
+        // Verificar o perfil ao carregar a página
+        window.onload = function() {
+            const perfil = localStorage.getItem('perfil');
+            console.log('Perfil armazenado:', perfil); // Log para verificar o perfil armazenado
+    
+            if (perfil === 'admin') {
+                document.getElementById('cadastrar_produto').style.display = 'block';
+            } else {
+                document.getElementById('cadastrar_produto').style.display = 'none';
+            }
+        };
+    </script>
+    <main>
+        <section class="catalog">
+            <h2>Catálogo de Produtos</h2>
+            <div class="product-grid">
+                <div class="product-card" data-name="Produto 1" data-price="29.90">
+                    <img src="image/agua.avif" alt="Poção da Metamorfose">
+                    <h3>Poção da Metamorfose</h3>
+                    <p>permitir que a pessoa mude a aparencia por 24hrs</p>
+                    <p class="price">R$ 990,00</p>
+                    <button onclick="addToCart('Poção da Metamorfose', 990.00)">Adicionar ao Carrinho</button>
+                    <i class="fas fa-star" id="favorite"></i>
+                </div>
+                <div class="product-card" data-name="Produto 2" data-price="49.90">
+                    <img src="image/verde.avif" alt="Poção da sorte">
+                    <h3>Poção da sorte</h3>
+                    <p>Poção da sorte instantânea (Atrai sorte por um período de 12 horas)</p>
+                    <p class="price">R$ 750,00</p>
+                    <button onclick="addToCart('Poção da sorte', 750.00)">Adicionar ao Carrinho</button>
+                    <i class="fas fa-star" id="favorite"></i>
+                </div>
+
+                <div class="product-card" data-name="Produto 2" data-price="49.90">
+                    <img src="image/fogo.avif" alt="Poção da esquecimento">
+                    <h3>Poção da esquecimento</h3>
+                    <p>Apaga uma memória indesejada, mas deve ser usada com cautela, pois o efeito é permanente</p>
+                    <p class="price">R$ 800,00</p>
+                    <button onclick="addToCart('Poção da esquecimento', 800.00)">Adicionar ao Carrinho</button>
+                    <i class="fas fa-star" id="favorite"></i>
+
+                </div>
+                <div class="product-card" data-name="Produto 2" data-price="49.90">
+                    <img src="image/cie.avif" alt="Poção da telepatia">
+                    <h3>Poção da telepatia</h3>
+                    <p>Permite que duas pessoas compartilhem pensamentos por uma hora</p>
+                    <p class="price">R$ 650,00</p>
+                    <button onclick="addToCart('Poção da telepatia', 650.00)">Adicionar ao Carrinho</button>
+                    <i class="fas fa-star" id="favorite"></i>
+
+                </div>
+                
+              
+            </div>
+        </section>
+        <section class="catalog">
+            
+            <h2>favoritos da galera</h2>
+            <div class="product-grid">
+                <div class="product-card" data-name="Produto 1" data-price="29.90">
+                    <img src="image/paz1.jpg" alt="Poção da Paz">
+                    <h3>Poção da Paz</h3>
+                    <p>Essa Poção proporciona uma profunda sensaçao de serenidade e paz, para mentes agitadas.</p>
+                    <p class="price">R$ 1,000</p>
+                    <button onclick="addToCart('Poção da Paz', 1.000)">Adicionar ao Carrinho</button>
+                    <i class="fas fa-star" id="favorite"></i>
+
+                </div>
+                <div class="product-card" data-name="Produto 2" data-price="49.90">
+                    <img src="image/agora.avif" alt="Poção da Camuflagem">
+                    <h3>Poção da Camuflagem</h3>
+                    <p>Ao beber essa Poção o usuario adiquire a habilidade de ser confundido com o ambiente ao seu redor, tornando o invisivel aos olhos</p>
+                    <p class="price">R$ 2,000</p>
+                    <button onclick="addToCart('Poção da Camuflagem', 2.000)">Adicionar ao Carrinho</button>
+                    <i class="fas fa-star" id="favorite"></i>
+
+                </div>
+                <div class="product-card" data-name="Produto 2" data-price="49.90">
+                    <img src="image/agua2.avif" alt="Poção Aquatica">
+                    <h3>Poção Aquatica</h3>
+                    <p>Lhe permiteque o usuario consiga respirar na agua durante 2 horas.</p>
+                    <p class="price">R$ 1,200</p>
+                    <button onclick="addToCart('Poção Aquatica', 1.200)">Adicionar ao Carrinho</button>
+                    <i class="fas fa-star" id="favorite"></i>
+
+                </div>
+                <div class="product-card" data-name="Produto 2" data-price="49.90">
+                    <img src="image/amareloo.jpg" alt="Poção da Velocidade">
+                    <h3>Poção da Velocidade</h3>
+                    <p>Concede uma velocidade sobre humana por 15 minutos, ideal para fugas rapidas ou completar tarefas em tempos records</p>
+                    <p class="price">R$ 2,500</p>
+                    <button onclick="addToCart('Poção da Velocidade', 2.500)">Adicionar ao Carrinho</button>
+                    <i class="fas fa-star" id="favorite"></i>
+
+                </div>
+                
+               
+            </div>
+        </section>
+    </main>
+
+    <footer>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

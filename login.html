@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="login.css">
+    <title>Login</title>
+    <link rel="shortcut icon" href="../img/logo.webp" type="image/x-icon">
+</head>
+<body id="principal">
+    <div id="login">
+        <form class="caixa" id="loginForm" onsubmit="return handleLogin(event);">
+            <img src="../img/logo.png" alt="">
+            <h1>LOGIN</h1>
+            <div class="email">
+                <input type="text" id="email" name="email" placeholder="Digite seu Email" required>
+            </div>
+            <div class="senha">
+                <input type="password" id="senha" name="senha" placeholder="Digite sua Senha" required>
+            </div>
+            <div class="entrar">
+                <p>Ainda não tem uma conta? <a href="cadastro.html">Crie uma.</a></p>
+                <button type="submit" id="aentrar" class="aentrar">ENTRAR</button>
+             
+            </div>
+        </form>
+    </div>
+    <div id="perfil" style="display: none;"></div>
+    <div id="cadastrar_produto" style="display: none;">
+
+    <script src="login.js"></script>
+</body>
+</html>

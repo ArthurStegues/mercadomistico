@@ -1,0 +1,198 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 30px 0;
+    position: relative;
+}
+
+h1{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: relative;
+}
+
+.logo img {
+    height: 50px; /* Ajuste a altura conforme necessário */
+}
+
+nav {
+    flex-grow: 1;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.cart {
+    position: relative;
+
+}
+
+.cart-content {
+    align-items: center;
+    display: none;
+    background: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart-content ul li {
+    padding: 5px 0;
+}
+
+.product-card {
+
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px;
+    width: 250px;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+
+}
+
+.product-card h3 {
+    margin: 10px 0;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: #007bff;
+    margin: 10px 0;
+}
+
+.product-card button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-card button:hover {
+    background: #0056b3;
+}
+
+.catalog {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+}
+
+.header-button, .login-button {
+    position: absolute;
+}
+
+.header-button {
+    left: 20px;
+}
+
+.login-button {
+    right: 12vw;
+
+}
+
+.header-button button, .login-button button {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header-button button:hover, .login-button button:hover {
+    background: #218838;
+}
+
+.login-button button {
+    display: flex;
+    background: #007bff;
+}
+
+.login-button button:hover {
+    background: #0056b3;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.cart button{
+    display: flex;
+    background: red;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.fa-star {
+    color: #ccc; /* default color */
+    cursor: pointer; /* change cursor to hand */
+    margin-left: 10px; /* adiciona margem à esquerda */
+  }
+ 
+  .fa-star.active {
+    color: #ffd700; /* golden color */
+  }

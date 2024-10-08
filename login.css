@@ -1,0 +1,90 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #202020;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #00ff7f;
+}
+
+.aentrar {
+    text-decoration: none;
+    color: black;
+}
+
+#login {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.caixa input {
+    border-radius: 15px;
+    border: none;
+    width: 300px;
+    height: 45px;
+    padding-left: 15px;
+    background-color: #525252;
+    color: #b6b6b6;
+    margin-bottom: 15px;
+}
+
+#funcao {
+    border-radius: 15px;
+    border: none;
+    width: 315px;
+    height: 47px;
+    padding-left: 15px;
+    background-color: #525252;
+    color: #b6b6b6;
+    margin-bottom: 15px;
+}
+
+
+
+.handleSubmit{
+    cursor: pointer;
+    width: 300px;
+    height: 45px;
+    border-radius: 20px;
+    border: none;
+    background-color: #00ff7f;
+    color: #202020;
+}
+
+.aentrar {
+    cursor: pointer;
+    width: 300px;
+    height: 45px;
+    border-radius: 20px;
+    border: none;
+    background-color: #00ff7f;
+    color: #202020; 
+}
+
+input::placeholder {
+    color: #b6b6b6;
+}
+
+h1 {
+    color: #FAFAFA;
+}
+
+.caixa {
+    margin-top: 65px;
+    display: flex;
+    flex-direction: column;
+}
+
+.caixa img {
+    width: 215px;
+}
+
+input:focus {
+    outline: none;
+}
