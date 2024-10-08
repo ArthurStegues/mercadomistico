@@ -439,4 +439,5 @@ app.delete('/produto/deletar/:idProduto', (request, response) => {
  Faz uma consulta para buscar um usuario no banco de dados (usuarios) sujo email corresponda ao fornecido
  se o usuario foi encontrado e as verificações foram bem sucedidas, a rota responde com um status 200 (OK) e uma mensagem indicando que o login foi realizado com sucesso, a resposta inclui também o perfil do usuario, se é admin ou usuario
 
- CONSIDERAÇÕES FINAIS: Trabalho que serviu muito para aprendizado principalmente do conceito de rotas, como elas funcionam no site e etc, os videos disponibilizados no teams serviram de grande ajuda também para a realização do trabalho.
+ CONSIDERAÇÕES FINAIS: Trabalho que serviu muito para aprendizado principalmente do conceito de rotas, como elas funcionam no site e etc, os videos disponibilizados no teams serviram de grande ajuda também para a realização do trabalho.!
+ 
